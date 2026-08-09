@@ -1,5 +1,6 @@
 import React from 'react';
 import { ArrowUp, Mail, Phone, MapPin, Shield } from 'lucide-react';
+import logoImg from '../assets/logo.png';
 import './Footer.css';
 
 export default function Footer({ onOpenAdmin }) {
@@ -14,7 +15,7 @@ export default function Footer({ onOpenAdmin }) {
           {/* Brand Col */}
           <div className="footer-brand-col">
             <div className="footer-logo-wrapper">
-              <img src="/logo.png" alt="NexaAI Solutions Logo" className="footer-logo-img" />
+              <img src={logoImg} alt="NexaAI Solutions Logo" className="footer-logo-img" />
             </div>
             
             <p className="footer-tagline">Automate Today. Lead Tomorrow.</p>

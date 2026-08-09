@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X, Shield, ArrowRight } from 'lucide-react';
+import logoImg from '../assets/logo.png';
 import './Header.css';
 
 export default function Header({ onOpenAdmin }) {
@@ -42,7 +43,7 @@ export default function Header({ onOpenAdmin }) {
         {/* Logo */}
         <a href="#hero" className="logo-brand" aria-label="NexaAI Solutions Home">
           <div className="logo-wrapper">
-            <img src="/logo.png" alt="NexaAI Solutions Logo" className="brand-logo-img" />
+            <img src={logoImg} alt="NexaAI Solutions Logo" className="brand-logo-img" />
           </div>
         </a>
 

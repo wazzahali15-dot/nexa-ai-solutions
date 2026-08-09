@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Eye, EyeOff, Shield, ArrowRight, AlertCircle, Lock } from 'lucide-react';
 import { loginAdmin } from '../services/leadService';
+import logoImg from '../assets/logo.png';
 import './AdminLogin.css';
 
 export default function AdminLogin({ onLoginSuccess, onGoHome }) {
@@ -38,7 +39,7 @@ export default function AdminLogin({ onLoginSuccess, onGoHome }) {
       <div className="admin-login-card">
         {/* Logo Brand */}
         <div className="login-logo-container">
-          <img src="/logo.png" alt="NexaAI Solutions Logo" className="login-brand-logo" />
+          <img src={logoImg} alt="NexaAI Solutions Logo" className="login-brand-logo" />
         </div>
 
         <div className="login-header">
