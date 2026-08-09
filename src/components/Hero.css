@@ -1,0 +1,330 @@
+.hero-section {
+  padding-top: 160px;
+  padding-bottom: 110px;
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.hero-container {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 3.5rem;
+  align-items: center;
+}
+
+/* Content Left */
+.hero-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-title {
+  margin-bottom: 1.25rem;
+  font-weight: 800;
+  line-height: 1.15;
+}
+
+.hero-subtitle {
+  font-size: 1.15rem;
+  color: var(--text-muted);
+  line-height: 1.65;
+  margin-bottom: 2.25rem;
+  max-width: 620px;
+}
+
+.hero-cta-group {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  margin-bottom: 3.5rem;
+}
+
+.hero-btn-main {
+  padding: 1rem 2rem;
+  font-size: 0.95rem;
+  letter-spacing: 0.02em;
+}
+
+.hero-btn-sub {
+  padding: 1rem 1.75rem;
+  font-size: 0.95rem;
+}
+
+/* Metrics Strip */
+.hero-metrics-strip {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding-top: 1.75rem;
+  border-top: 1px solid rgba(34, 38, 48, 0.6);
+}
+
+.hero-metric {
+  display: flex;
+  flex-direction: column;
+}
+
+.metric-value {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--text-white);
+  letter-spacing: -0.02em;
+}
+
+.metric-label {
+  font-size: 0.775rem;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.metric-divider {
+  width: 1px;
+  height: 30px;
+  background-color: var(--border-subtle);
+}
+
+/* Hero Network Card Right */
+.hero-visual-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.hero-network-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6), 0 0 30px rgba(255, 138, 0, 0.05);
+  position: relative;
+}
+
+.network-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.25rem;
+  background-color: var(--bg-dark);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.network-title-box {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  background-color: var(--accent-orange);
+  border-radius: 50%;
+}
+
+.status-dot.pulsing {
+  box-shadow: 0 0 10px var(--accent-orange);
+  animation: pulseGlow 2s infinite;
+}
+
+.network-title {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-white);
+  letter-spacing: 0.03em;
+}
+
+.network-badge {
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--accent-orange);
+  background-color: var(--orange-subtle);
+  border: 1px solid var(--border-orange);
+  padding: 2px 8px;
+  border-radius: var(--radius-pill);
+}
+
+/* SVG Network Layer */
+.svg-network-container {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  background: radial-gradient(circle at 50% 50%, #151820 0%, #0A0C0F 100%);
+}
+
+.network-svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.circuit-path {
+  fill: none;
+  stroke: rgba(255, 138, 0, 0.25);
+  stroke-width: 1.5;
+  stroke-dasharray: 4 4;
+}
+
+.data-pulse {
+  fill: var(--accent-bright);
+  filter: drop-shadow(0 0 6px var(--accent-orange));
+}
+
+/* Interactive Node Overlay */
+.interactive-nodes-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.network-node {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+}
+
+.node-icon-box {
+  width: 40px;
+  height: 40px;
+  background-color: var(--bg-dark);
+  border: 1px solid var(--border-subtle);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent-orange);
+  transition: all var(--transition-fast);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.network-node:hover .node-icon-box,
+.node-active .node-icon-box {
+  border-color: var(--accent-orange);
+  background-color: var(--bg-elevated);
+  color: var(--text-white);
+  box-shadow: 0 0 20px var(--accent-orange);
+  transform: scale(1.15);
+}
+
+.node-tooltip {
+  position: absolute;
+  bottom: 120%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--bg-elevated);
+  border: 1px solid var(--border-orange);
+  border-radius: var(--radius-sm);
+  padding: 0.5rem 0.75rem;
+  white-space: nowrap;
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: all var(--transition-fast);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 10;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.8);
+}
+
+.network-node:hover .node-tooltip,
+.node-active .node-tooltip {
+  opacity: 1;
+  visibility: visible;
+  bottom: 130%;
+}
+
+.tooltip-type {
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--accent-orange);
+  font-weight: 700;
+}
+
+.tooltip-name {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--text-white);
+}
+
+.tooltip-status {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+}
+
+/* Telemetry Footer */
+.network-footer-telemetry {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.85rem 1.25rem;
+  background-color: var(--bg-dark);
+  border-top: 1px solid var(--border-subtle);
+}
+
+.telemetry-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.telemetry-label {
+  font-size: 0.65rem;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+}
+
+.telemetry-value {
+  font-size: 0.825rem;
+  font-weight: 700;
+  color: var(--text-white);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .hero-section {
+    padding-top: 120px;
+    padding-bottom: 70px;
+  }
+
+  .hero-container {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .hero-content {
+    text-align: center;
+    align-items: center;
+  }
+
+  .hero-cta-group {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .hero-metrics-strip {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-cta-group {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .hero-btn-main, .hero-btn-sub {
+    width: 100%;
+  }
+
+  .hero-metrics-strip {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .metric-divider {
+    display: none;
+  }
+}

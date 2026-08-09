@@ -1,0 +1,50 @@
+[
+  {
+    "id": "lead-101",
+    "name": "Tariq Malik",
+    "business_name": "Apex Logistics Ltd",
+    "email": "tariq@apexlogistics.com",
+    "phone": "+92 300 1234567",
+    "business_type": "Logistics & Supply Chain",
+    "service_interest": "Business Automation",
+    "message": "Looking to automate dispatch notifications and inventory status updates via WhatsApp.",
+    "status": "New",
+    "created_at": "2026-08-09T21:08:46.253Z"
+  },
+  {
+    "id": "lead-102",
+    "name": "Sarah Khan",
+    "business_name": "Zest Ecommerce",
+    "email": "sarah@zeststore.com",
+    "phone": "+92 321 9876543",
+    "business_type": "E-commerce",
+    "service_interest": "AI Chatbots",
+    "message": "Need a 24/7 customer support chatbot integrated with Shopify and WhatsApp Business API.",
+    "status": "Contacted",
+    "created_at": "2026-08-09T05:08:46.254Z"
+  },
+  {
+    "id": "lead-103",
+    "name": "Dr. Faisal Ahmed",
+    "business_name": "CureCare Clinics",
+    "email": "faisal@curecare.health",
+    "phone": "+92 333 4567890",
+    "business_type": "Healthcare",
+    "service_interest": "Custom AI Solutions",
+    "message": "We want patient appointment scheduling and automated medical report summary tools.",
+    "status": "Qualified",
+    "created_at": "2026-08-07T23:08:46.254Z"
+  },
+  {
+    "id": "lead-104",
+    "name": "Imran Qureshi",
+    "business_name": "FinTech Growth Partners",
+    "email": "imran@fintechpartners.pk",
+    "phone": "+92 312 3456789",
+    "business_type": "Financial Services",
+    "service_interest": "Data Analytics",
+    "message": "Require custom real-time financial metrics dashboard and automated client risk profiling.",
+    "status": "Closed",
+    "created_at": "2026-08-05T23:08:46.254Z"
+  }
+]

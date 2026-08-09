@@ -1,0 +1,81 @@
+.promo-banner-wrapper {
+  padding: 40px 0;
+  background-color: var(--bg-dark);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.promo-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--accent-orange);
+  border-radius: var(--radius-lg);
+  padding: 2.5rem 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.8), 0 0 30px var(--orange-subtle);
+  position: relative;
+  overflow: hidden;
+}
+
+.promo-left {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  max-width: 650px;
+}
+
+.promo-tag-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  color: var(--accent-orange);
+  background-color: var(--orange-subtle);
+  padding: 4px 12px;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--border-orange);
+  align-self: flex-start;
+}
+
+.promo-icon {
+  color: var(--accent-orange);
+}
+
+.promo-title {
+  font-size: clamp(1.5rem, 3vw, 2.25rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.promo-subtext {
+  font-size: 1rem;
+  color: var(--text-muted);
+}
+
+.promo-btn {
+  padding: 1.1rem 2.25rem;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 992px) {
+  .promo-card {
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem;
+  }
+
+  .promo-left {
+    align-items: center;
+  }
+
+  .promo-tag-badge {
+    align-self: center;
+  }
+
+  .promo-btn {
+    width: 100%;
+  }
+}
